@@ -1,0 +1,664 @@
+@font-face {
+  src: url(fonts/OpenSans-VariableFont_wdth\wght.ttf);
+  font-family: "Open Sans", sans-serif;
+}
+@font-face {
+  font-family: "Roboto", sans-serif;
+  src: url(fonts/Roboto-Regular.ttf);
+}
+:root {
+  --txt-font-family: "Roboto", sans-serif;
+  --txt2-font-family: "Open Sans", sans-serif;
+}
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+}
+a {
+  color: black;
+}
+/* For the navigation bar */
+header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: #516beb;
+}
+.logo h1 {
+  font-family: var(--txt-font-family);
+  margin: 10px 10px 0px;
+}
+.logo h1 a {
+  color: #fff;
+}
+header nav {
+  flex: 1;
+}
+header nav ul {
+  flex-wrap: wrap;
+  float: right;
+}
+header nav ul li {
+  float: left;
+  margin: 20px;
+}
+header nav ul li a {
+  color: #fff;
+  font-family: var(--txt-font-family);
+  position: relative;
+}
+header nav ul li a::after {
+  content: " ";
+  width: 0;
+  height: 3px;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  background-color: #fff;
+  transform: translatex(-50%);
+  transition: width 0.3s;
+}
+header nav ul li a:hover::after {
+  width: 100%;
+}
+.hand {
+  display: none;
+}
+/* For the 1st header */
+.head-org {
+  display: flex;
+  flex-direction: row;
+  height: 600px;
+  background-color: #516beb;
+  color: #fff;
+  font-family: var(--txt2-font-family);
+}
+.head-org .head-qote {
+  align-self: center;
+  flex: 1;
+  margin-left: 10px;
+}
+.head-org .head-qote h1 {
+  font-size: 50px;
+  color: transparent;
+  -webkit-text-stroke: 1px #fff;
+  background: url(img/egg.jpg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-clip: text;
+  text-align: left;
+  position: relative;
+  animation: back 9s linear infinite;
+}
+
+@keyframes back {
+  100% {
+    background-position: 1000px 0;
+  }
+}
+.head-org .head-qote p {
+  margin-top: 20px;
+  font-size: 17px;
+  opacity: 0;
+  transform: translateY(3rem);
+  animation: fadeinup 3s ease forwards;
+}
+@keyframes fadeinup {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.head-org .head-img {
+  align-self: center;
+}
+/* For the egg section */
+.egg-page {
+  display: flex;
+  flex-direction: row;
+  height: 400px;
+  font-family: var(--txt2-font-family);
+}
+.egg-page .egg-quote {
+  flex: 1;
+  align-self: center;
+}
+
+.egg-page .egg-quote h2 {
+  width: 40%;
+  font-size: 30px;
+  text-align: left;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  margin-left: 150px;
+}
+.egg-page .egg-quote p {
+  line-height: 20px;
+  margin-left: 150px;
+  width: 56%;
+  font-size: 15px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+.egg-page .egg-quote h6 {
+  margin-left: 150px;
+  font-size: 15px;
+  text-decoration: underline 2px #fee400;
+}
+.egg-page .egg-pic {
+  flex: 1;
+  background-image: url(img/egg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* For the wine section */
+.wine-page {
+  display: flex;
+  flex-direction: row;
+  height: 400px;
+  font-family: var(--txt2-font-family);
+}
+.wine-page .wine-pic {
+  flex: 1;
+  background-image: url(img/wine.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.wine-page .wine-quote {
+  flex: 1;
+  align-self: center;
+}
+.wine-page .wine-quote h2 {
+  width: 50%;
+  font-size: 30px;
+  text-align: left;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  margin-left: 150px;
+}
+.wine-page .wine-quote p {
+  line-height: 20px;
+  margin-left: 150px;
+  width: 56%;
+  font-size: 15px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+.wine-page .wine-quote h6 {
+  margin-left: 150px;
+  font-size: 15px;
+  text-decoration: underline 2px #ff1700;
+}
+/* For the orange and strawberry section */
+.org-straw {
+  display: flex;
+  flex-direction: row;
+  height: 400px;
+  font-family: var(--txt2-font-family);
+  color: #fff;
+}
+.straw {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  flex-flow: column wrap;
+  align-items: center;
+  flex: 1;
+  background-image: url(img/berry.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.straw h3 {
+  font-size: 25px;
+  margin-bottom: 20px;
+  z-index: 1;
+}
+.straw p {
+  width: 48%;
+  line-height: 23px;
+  text-align: center;
+  font-size: 15px;
+  z-index: 1;
+}
+.org {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  flex-flow: column wrap;
+  align-items: center;
+  flex: 1;
+  background-image: url(img/orange-juice.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.org h3 {
+  font-size: 25px;
+  margin-bottom: 20px;
+  z-index: 1;
+}
+.org p {
+  width: 48%;
+  line-height: 23px;
+  text-align: center;
+  font-size: 15px;
+  z-index: 1;
+}
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.5;
+}
+/* For the clients testimonials */
+.client {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+  font-family: var(--txt2-font-family);
+}
+.cilent-qotes {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  height: auto;
+  width: 80%;
+}
+.market {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+}
+.profile {
+  background-color: #99a8b2;
+  background-image: url(img/icon-head.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  width: 52px;
+  height: 52px;
+  margin-bottom: 20px;
+}
+.client h2 {
+  font-size: 25px;
+  color: #99a8b2;
+  margin-bottom: 30px;
+}
+.market p {
+  font-size: 15px;
+  width: 80%;
+  margin-bottom: 30px;
+}
+.market h5 {
+  margin-bottom: 10px;
+  font-weight: 800;
+}
+.market h6 {
+  color: #99a8b2;
+}
+/* For the food gallery section */
+.food {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 400px;
+}
+.food div {
+  flex: 1;
+}
+
+.ice-cream {
+  background-image: url(img/cone.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.cone {
+  background-image: url(img/joy.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.sugar {
+  background-image: url(img/food.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.all-food {
+  background-image: url(img/life.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* For the footer section */
+footer {
+  display: flex;
+  background-color: #99a8b2;
+  width: 100%;
+  height: 300px;
+  text-align: center;
+  align-items: center;
+  justify-content: space-around;
+  font-family: var(--txt2-font-family);
+}
+footer h3 {
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+footer ul li {
+  float: left;
+  margin: 10px;
+}
+.soc img {
+  margin-top: 50px;
+  margin-left: 10px;
+  width: 45px;
+  height: 45px;
+}
+/* For tablet view */
+@media only screen and (max-width: 820px) and (min-width: 481px) {
+  /* For the 1st header */
+  .head-org {
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+  }
+  .head-org .head-qote {
+    margin-left: 0px;
+  }
+  .head-org .head-qote h1 {
+    margin-top: 40px;
+    font-size: 40px;
+    text-align: center;
+  }
+  .head-org .head-qote p {
+    display: none;
+  }
+
+  .head-img img {
+    width: 500px;
+  }
+  /* For the egg section */
+  .egg-page .egg-quote h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    margin-left: 100px;
+  }
+  .egg-page .egg-quote p {
+    margin-left: 100px;
+    font-size: 10px;
+    margin-bottom: 15px;
+  }
+  .egg-page .egg-quote h6 {
+    margin-left: 100px;
+    font-size: 10px;
+  }
+  /* For the wine section */
+  .wine-page .wine-quote h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    margin-left: 100px;
+  }
+  .wine-page .wine-quote p {
+    margin-left: 100px;
+    font-size: 10px;
+    margin-bottom: 15px;
+  }
+  .wine-page .wine-quote h6 {
+    margin-left: 100px;
+    font-size: 10px;
+  }
+  /* For the orange and strawberry section */
+  .straw h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  .straw p {
+    line-height: 20px;
+    font-size: 10px;
+  }
+  .org h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  .org p {
+    line-height: 20px;
+    font-size: 10px;
+  }
+  /* For the clients testimonials */
+  .client {
+    height: 400px;
+  }
+  .cilent-qotes {
+    width: 90%;
+  }
+  .profile {
+    width: 50px;
+    height: 50px;
+  }
+  .client h2 {
+    font-size: 20px;
+  }
+  .market p {
+    font-size: 10px;
+    margin-bottom: 25px;
+  }
+  .market h5 {
+    font-size: 10px;
+    margin-bottom: 10px;
+  }
+  /* For the food gallery section */
+  .food {
+    height: 250px;
+  }
+  /* For the footer section */
+  footer {
+    height: 200px;
+  }
+  footer h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  footer ul li {
+    margin: 10px;
+  }
+  footer ul li a {
+    font-size: 10px;
+  }
+  .soc img {
+    margin-top: 20px;
+    width: 35px;
+    height: 35px;
+  }
+}
+/* For mobile view  */
+@media only screen and (max-width: 414px) and (min-width: 320px) {
+  /* For the navigation bar */
+  .logo h1 {
+    font-size: 20px;
+  }
+  header nav ul {
+    flex-direction: column;
+    display: none;
+    width: 100%;
+  }
+  /* For the handburger */
+  nav button {
+    float: right;
+    margin-top: 8px;
+    margin-right: 20px;
+  }
+  .nav-ul.show {
+    display: flex;
+  }
+  .hand {
+    display: block;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    color: #fff;
+    font-size: 20px;
+  }
+  .hand:focus {
+    outline: none;
+  }
+  /* For the 1st header */
+  .head-org {
+    flex-direction: column;
+    height: 500px;
+  }
+  .head-org .head-qote {
+    margin-left: 2px;
+  }
+  .head-org .head-qote h1 {
+    margin-top: 40px;
+    font-size: 30px;
+    text-align: center;
+  }
+  .head-org .head-qote p {
+    display: none;
+  }
+  .head-img img {
+    width: 400px;
+    height: auto;
+  }
+  /* For the egg section */
+  .egg-page {
+    flex-direction: column-reverse;
+    height: 500px;
+  }
+  .egg-quote {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+  }
+  .egg-page .egg-quote h2 {
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 15px;
+    margin-left: 120px;
+  }
+  .egg-page .egg-quote p {
+    margin-left: 100px;
+    width: 50%;
+    font-size: 10px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .egg-page .egg-quote h6 {
+    margin-left: 175px;
+    font-size: 8px;
+  }
+  /* For the wine section */
+  .wine-page {
+    flex-direction: column;
+    height: 500px;
+  }
+  .wine-quote {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+  }
+  .wine-page .wine-quote h2 {
+    width: 50%;
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 15px;
+    margin-left: 100px;
+  }
+  .wine-page .wine-quote p {
+    margin-left: 100px;
+    width: 50%;
+    font-size: 10px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .wine-page .wine-quote h6 {
+    margin-left: 175px;
+    font-size: 8px;
+  }
+  /* For the orange and strawberry section */
+  .org-straw {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    font-family: var(--txt2-font-family);
+    color: #fff;
+  }
+  .straw {
+    justify-content: center;
+  }
+  .straw h3 {
+    font-size: 15px;
+    margin-bottom: 15px;
+  }
+  .straw p {
+    line-height: 20px;
+    font-size: 10px;
+  }
+  .org {
+    justify-content: center;
+  }
+  .org h3 {
+    font-size: 15px;
+    margin-bottom: 15px;
+  }
+  .org p {
+    line-height: 20px;
+    font-size: 10px;
+  }
+  /* For the clients testimonials */
+  .client {
+    height: 700px;
+  }
+  .cilent-qotes {
+    flex-direction: column;
+    width: 50%;
+  }
+  .profile {
+    width: 50px;
+    height: 50px;
+  }
+  .client h2 {
+    font-size: 15px;
+  }
+  .market {
+    margin-bottom: 30px;
+  }
+  .market p {
+    font-size: 10px;
+    margin-bottom: 15px;
+  }
+  .market h5 {
+    font-size: 10px;
+  }
+  .market h6 {
+    font-size: 8px;
+  }
+  /* For the food gallery section */
+  .food {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 100%;
+    height: 400px;
+  }
+  /* For the footer section */
+  .soc img {
+    margin-top: 30px;
+    width: 40px;
+    height: 40px;
+  }
+}
